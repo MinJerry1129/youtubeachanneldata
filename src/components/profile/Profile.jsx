@@ -32,7 +32,7 @@ const Profile =() =>{
             <>{items.map(item =>{
                 return(
                     <div key={item.id}>
-                        {item.id}
+                        {item.id}adfadf
                     </div>
                 )
                 
