@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
+import GoogleLogin from "react-google-login";
 import './Profile.css'
+
+const googleUrl = 'https://accounts.google.com/gsi/client';
 
 const Profile =() =>{
     const [isLoading, setIsLoading] = useState(false)
@@ -12,24 +15,6 @@ const Profile =() =>{
         fetchData();
     }, [])
     const fetchData = async() =>{
-        // gapi = await loadGapiInsideDOM()
-        
-        // window.gapi.load('client', initClient())
-        // console.log(process.env.REACT_APP_API_KEY)
-        // setIsLoading(true)
-        // fetch("https://www.googleapis.com/youtube/v3/channels?forUsername=test&key="+process.env.REACT_APP_API_KEY)
-        // .then(res => res.json())
-        // .then(
-        //     (result) =>{                
-        //         console.log("items:::::", result.items[0].id);
-        //         setItems(result.items)
-        //         setIsLoading(false)
-
-        //     },
-        //     (error) =>{
-        //         console.log(error);
-        //     }
-        // )
     }
 
     const onSuccess = (res) =>{
@@ -48,22 +33,15 @@ const Profile =() =>{
         <>
         <div>
             Login with google
-            <div>
-                {/* {isSigin?
-                <GoogleLogout
-                    clientId={process.env.REACT_APP_CLIENT_ID}
-                    buttonText="Logout"
-                    onLogoutSuccess={onLogoutSuccess}
-                />:
+            <div>               
+                <div>login</div>
                 <GoogleLogin
-                    clientId={process.env.REACT_APP_CLIENT_ID}
-                    buttonText="Login"
+                    clientId="191654869277-2fbl88orca94q1dvd3983uvlj3kpv6dq.apps.googleusercontent.com"
+                    buttonText="Login with Google"
                     onSuccess={onSuccess}
                     onFailure={onFailure}
-                    cookiePolicy = {'single_host_origin'}
-                    isSignedIn={true}
-                />} */}
-                <div>login</div>
+                    cookiePolicy="single_host_origin"
+                />
             </div>            
         </div>
         {/* {isLoading? 
