@@ -90,8 +90,8 @@ const Profile =() =>{
                             <div>Videos: {item.statistics.videoCount}</div>
                             <p>{item.snippet.description}</p>
                             <hr />
-                            <a target="_blank" href={`https://youtube.com/${item.snippet.customUrl}`}>Visit Channel</a>
-                            <hr/><p/>
+                            {item.snippet.customUrl &&<><a target="_blank" href={`https://youtube.com/${item.snippet.customUrl}`}>Visit Channel</a> <hr/></>}
+                            <p/>
                         </div>
                     )                    
                 })}
