@@ -31,10 +31,12 @@ const Profile =() =>{
 
     const onFailure = (res) =>{
         console.log("login Fail", res)
+        setChannels([])
     }
 
     const onLogoutSuccess = () =>{
         console.log("logout sucess")
+        setChannels([])
         setIsSignin(false)
     }
 
