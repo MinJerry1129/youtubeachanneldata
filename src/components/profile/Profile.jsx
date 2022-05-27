@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { GoogleLogout, GoogleLogin } from "react-google-login";
 import './Profile.css'
 
 const Profile =() =>{
@@ -12,7 +11,9 @@ const Profile =() =>{
     useEffect(()=>{
         fetchData();
     }, [])
-    const fetchData = () =>{
+    const fetchData = async() =>{
+        // gapi = await loadGapiInsideDOM()
+        
         // window.gapi.load('client', initClient())
         // console.log(process.env.REACT_APP_API_KEY)
         // setIsLoading(true)
@@ -48,7 +49,7 @@ const Profile =() =>{
         <div>
             Login with google
             <div>
-                {isSigin?
+                {/* {isSigin?
                 <GoogleLogout
                     clientId={process.env.REACT_APP_CLIENT_ID}
                     buttonText="Logout"
@@ -61,9 +62,9 @@ const Profile =() =>{
                     onFailure={onFailure}
                     cookiePolicy = {'single_host_origin'}
                     isSignedIn={true}
-                />}
-            </div>
-            
+                />} */}
+                <div>login</div>
+            </div>            
         </div>
         {/* {isLoading? 
             <div> Loading</div> :
